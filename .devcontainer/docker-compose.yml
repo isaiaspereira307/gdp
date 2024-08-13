@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  gdp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
+    command: sleep infinity
+    volumes:
+      - ..:/workspace:cached
